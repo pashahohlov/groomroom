@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГрумRoom - уход за внешним видом домашних животных</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-block">
+                <a href="index.html" class="logo-link">ГрумRoom</a>
+                <div class="header-info">
+                    <div class="header-login">
+                        <a href="login.html" class="header-login__link header-link">Выход</a>
+                        <!-- /.header-login__link -->
+                    </div>
+                    <!-- /.header-login -->
+                    <div class="header-login">
+                        <button class="button__reg " onclick="document.getElementById('id02').style.display='block'">Удаление заявки</button>
+                        <!-- /.header-login__reg -->
+                        <div id="id02" class="modal">
+                            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">x</span>
+                            <form class="modal-content">
+                                <div class="container">
+                                <h1>Удаление заявки</h1>
+                                <label>
+                                    <input type="checkbox" checked="checked" name="assent" style="margin-bottom:15px"> Согласие на удаление заявки
+                                </label>
+                                <div class="clearfix">
+                                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Закрыть</button>
+                                    <button type="submit" class="signup">Согласиться</button>
+                                </div>
+                                </div>
+                            </form>
+                            </div>
+                    </div>
+                    <!-- /.header-login -->
+                    <div class="header-login">
+                        <button class="button__reg" onclick="document.getElementById('id03').style.display='block'">Просмотр своих заявок</button>
+                        <!-- /.header-login__reg -->
+                        <div id="id03" class="modal">
+                            <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">x</span>
+                            <form class="modal-content">
+                                <div class="container">
+                                <h1>Просмотр своих заявок</h1>
+                                <hr>
+                                <p>Временная метка - 20.12.2021</p>
+                                <p>Кличка домашнего животного - Петрушка</p>
+                                <p>Описание запрашиваемых работ - </p>
+                                <p>Категория заявки - Новая</p>
+                                <p>Статус заявки - Обработка данных</p>
+                                <p>Фото:</p>
+                                <img src="/img/4(2).jpg" alt="photo" class="modal_photo">
+                                <div class="clearfix">
+                                    <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Закрыть</button>
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.header-login -->
+                </div>
+                <!-- /.header-info -->
+            </div>
+            <!-- /.header-block -->
+        </div>
+        <!-- /.container -->
+    </header>
+    <!-- /.header -->
+    <section class="reg section ">
+        <div class="container">
+            <form action="index.html">
+                <div class="reg-block">
+                    <h2 class="title reg-title">Создание заявки</h2>
+                    <form  class="reg-input__group">
+                        <input type="text" name="userName" class="reg-input input" placeholder="Кличка домашнего животного">
+                        <input type="text" name="userLogin" class="reg-input input" placeholder="Описание запрашиваемых работ">
+                        <input type="text" name="userEmail" class="reg-input input" placeholder="Категория">
+                        <input type="file" name="pic[]" class="photo" id="imgInput" />
+                    </form>
+                    <!-- /.reg-block -->
+                    <button class="button button--primaty reg-button">Создать заявку</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.reg -->
+</body>
+</html>
